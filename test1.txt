@@ -1,4 +1,4 @@
 Hi
 This is my frist git change
-second`:wq
-``
+second
+third
