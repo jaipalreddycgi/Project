@@ -1,0 +1,68 @@
+<div class="container" ng-controller="HeaderController as vm">
+  <div class="navbar-header">
+    <button class="navbar-toggle" type="button" ng-click="vm.isCollapsed = !vm.isCollapsed">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a ui-sref="home" class="navbar-brand">Bookshelf</a>
+  </div>
+  <nav class="navbar-collapse" uib-collapse="!vm.isCollapsed" role="navigation">
+    <!-- Navbar on the left-->
+    <ul class="nav navbar-nav">
+
+      <li class="dropdown" ng-switch="dropdown" uib-dropdown="true" ui-sref-active="active" >
+        <a class="dropdown-toggle" uib-dropdown-toggle ui-sref-active="active" role="button" aria-haspopup="true" aria-expanded="false">
+          Books&nbsp;
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a ui-sref="books.list">List Books</a>
+          </li>
+          <li>
+            <a ui-sref="books.create" ng-if="vm.isAdmin()">Add Book</a>
+          </li>
+          <li>
+            <a ui-sref="books.submit" ng-if="vm.isAdmin()">Submitted Books</a>
+          </li>
+          <li>
+            <a ui-sref="books.listUnavailable" ng-if="vm.isAdmin()">Unavailable Books</a>
+          </li>
+        </ul>
+      </li>
+      <!--books ends-->
+      <li>
+        <a ui-sref="myBooks">My Books</a>
+      </li>
+      <!-- my books ends-->
+      <li class="dropdown" ng-switch="dropdown" uib-dropdown="true" ng-if="vm.isAdmin()">
+        <a class="dropdown-toggle" uib-dropdown-toggle ui-sref-active="active" role="button" aria-haspopup="true" aria-expanded="true">Admin&nbsp;<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li>
+            <a ui-sref="admin.create">Create Admin</a>
+            <a ui-sref="admin.manage">Manage Admins</a>
+          </li>
+        </ul>
+      </li>
+      <!-- Admin ends-->
+    </ul>
+    <!-- Navbar on the left ends-->
+
+    <!-- Navbar on the right of the header-->
+    <ul class="nav navbar-nav navbar-right">
+      <li class="divider"></li>
+      <li>
+        <a href=""><span ng-bind="vm.authentication.user.displayName"></span></a>
+      </li>
+      <li class="divider-vertical"></li>
+      <li ui-sref-active="active">
+        <a ui-sref="authentication.signin">Sign In</a>
+      </li>
+      <li ui-sref-active="active">
+        <a href="/signout" target="_self">Sign out</a>
+      </li>
+    </ul>
+  </nav>
+</div>

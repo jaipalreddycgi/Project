@@ -1,0 +1,178 @@
+.content {
+  margin-top: 50px;
+}
+.undecorated-link:hover {
+  text-decoration: none;
+}
+[ng\:cloak],
+[ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+.header-profile-image {
+  opacity: 0.8;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.open .header-profile-image,
+a:hover .header-profile-image {
+  opacity: 1;
+}
+.user-header-dropdown-toggle {
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
+}
+.user-primary-account {
+  font-size: 30px;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+.error-text {
+  display: none;
+}
+.has-error .help-block.error-text {
+  display: block;
+}
+.has-error .help-inline.error-text {
+  display: inline;
+}
+
+.home {
+  margin-top: 50px;
+}
+
+.cover {
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(../img/header.jpg);
+  color: #fff;
+}
+
+.row {
+  background-color: #272d2d;
+  margin: 1%;
+  padding: 1%;
+  border: 1px solid;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+.popular-books {
+  height: 300px;
+}
+
+.home .rn-carousel-control {
+  position: static;
+}
+
+.carousel-container {
+  margin: 0 auto;
+}
+
+.carousel-container .col-md-2.col-sm-2 {
+  margin-top: 100px;
+}
+
+.carousel-container li img {
+  max-width: 200px;
+}
+
+.home .lead {
+   padding-top: 1em;
+}
+
+.feature-image {
+  max-width: 100%;
+  padding: 5%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.feature-links {
+  text-decoration: none;
+  color: white;
+}
+
+/* Ribbon to show over features not yet ready*/
+.wrapper {
+  padding: 1%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0 0 8px rgba(0,0,0,0.3);
+  box-shadow:         0 0 8px rgba(0,0,0,0.3);
+}
+
+.ribbon-wrapper-green {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: 12px;
+}
+
+.ribbon-green {
+  font: bold 15px Sans-Serif;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0 1px 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  transform:         rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -55px;
+  top: 35px;
+  width: 300px;
+  background-color: #BFDC7A;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45));
+  background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45);
+  background-image:    -moz-linear-gradient(top, #BFDC7A, #8EBF45);
+  background-image:     -ms-linear-gradient(top, #BFDC7A, #8EBF45);
+  background-image:      -o-linear-gradient(top, #BFDC7A, #8EBF45);
+  color: #6a6340;
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0 0 3px rgba(0,0,0,0.3);
+  box-shadow:         0 0 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-green:before, .ribbon-green:after {
+  content: "";
+  border-top:   3px solid #6e8900;
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon-green:before {
+  left: 0;
+}
+.ribbon-green:after {
+  right: 0;
+}
+/* Ribbon styles end */
+
+/* Features which are coming soon */
+.coming-soon {
+  opacity: 0.3
+}
