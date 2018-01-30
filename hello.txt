@@ -1,0 +1,5 @@
+
+Preparation	
+Checking internet connectivity
+Checking update center connectivity
+Success
